@@ -1,3 +1,4 @@
+# Packages
 library(tidyverse) 
 library(DT)
 library(scales)
@@ -18,7 +19,7 @@ hotspots <- read.csv("wifimap_test_case/data/hotspots_test.csv",
                         colClasses=rep("character" ,13),
                         fill = TRUE)
 
-# Меняем пустые ячейки на NA:
+# Changing empty values to NA:
 hotspots[hotspots == ""] <- NA
 
 conns <- read.csv("wifimap_test_case/data/conns_test.csv",
@@ -27,7 +28,7 @@ conns <- read.csv("wifimap_test_case/data/conns_test.csv",
                      quote ="\"",
                      fill = TRUE)
 
-# owner_id агрегрированы по id точкам доступа:
+# owner_id aggregatged:
 hotspots_created_in_total <- ddply(hotspots, 
                                    .(owner_id), 
                                    summarise, 
@@ -178,13 +179,13 @@ final_list <- list(hotspots_created_in_total,
                    week_conns_more_than_10)
 
 final_df <-join_all(final_list, by='owner_id', type='inner')
-View(final_df)
 
+# Plot
 dfr <- melt(arrange(final_df,desc(hotspots_created_in_total)), id.vars = "owner_id")
 
 dfr <- filter(dfr, variable=="hotspots_created_in_total" | variable =="hotspots_with_poor_connection" | variable=="hotspots_with_good_connection" | variable == "hotspots_with_moderate_connection")
 
-ggplot (dfr %>% filter (variable =="hotspots_created_in_total"), 
+plot_final <- ggplot (dfr %>% filter (variable =="hotspots_created_in_total"), 
         aes(reorder(owner_id, value), as.numeric(value), 
             fill = variable)) + 
   geom_bar(position = "stack", stat = "identity") +
@@ -203,3 +204,5 @@ ggplot (dfr %>% filter (variable =="hotspots_created_in_total"),
   theme_light() + 
   theme(axis.text.x = element_text(angle = 0, size = 8),
         axis.text.y = element_text(angle = 0, size = 8), text=element_text(family="Comic Sans MS")) + coord_flip()
+
+View(final_df)
