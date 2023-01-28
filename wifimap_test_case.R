@@ -8,11 +8,11 @@ library(ggplot2)
 library(reshape2)
 
 
-user <- read.csv("wifimap_test_case/data/users_test.csv",
+user <- read.csv("~/RProjects/wifimap_test_case/data/users_test.csv",
                     header = TRUE,
                     sep = ",")
 
-hotspots <- read.csv("wifimap_test_case/data/hotspots_test.csv",
+hotspots <- read.csv("~/RProjects/wifimap_test_case/data/hotspots_test.csv",
                         header = TRUE,
                         sep = ",",
                         quote = "\"",
@@ -22,7 +22,7 @@ hotspots <- read.csv("wifimap_test_case/data/hotspots_test.csv",
 # Changing empty values to NA:
 hotspots[hotspots == ""] <- NA
 
-conns <- read.csv("wifimap_test_case/data/conns_test.csv",
+conns <- read.csv("~/RProjects/wifimap_test_case/data/conns_test.csv",
                      header = TRUE,
                      sep = ",",
                      quote ="\"",
@@ -192,7 +192,7 @@ plot_final <- ggplot (dfr %>% filter (variable =="hotspots_created_in_total"),
   geom_bar(dfr%>% filter(grepl("hotspots_with", variable)), 
            mapping = aes(x=owner_id),
            position= "stack", stat = "identity") +
-  geom_text(aes(label=value, family = "Comic Sans MS" ), position=position_dodge(width=0.9), 
+  geom_text(aes(label=value, family = "sans" ), position=position_dodge(width=0.9), 
             hjust=-0.25, size =3) + 
   labs(title = "Гистограмма",
         subtitle = "Точки связи и качество соединения",
@@ -203,6 +203,5 @@ plot_final <- ggplot (dfr %>% filter (variable =="hotspots_created_in_total"),
                     values = c("hotspots_created_in_total"="#999999","hotspots_with_good_connection"="#00ba38", "hotspots_with_moderate_connection"="#FFFF33", "hotspots_with_poor_connection"="#FF5733")) + 
   theme_light() + 
   theme(axis.text.x = element_text(angle = 0, size = 8),
-        axis.text.y = element_text(angle = 0, size = 8), text=element_text(family="Comic Sans MS")) + coord_flip()
-
-View(final_df)
+        axis.text.y = element_text(angle = 0, size = 8), text=element_text(family="sans")) + coord_flip()
+plot_final
