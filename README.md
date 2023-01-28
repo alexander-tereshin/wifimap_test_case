@@ -35,4 +35,5 @@ library(reshape2)
 
 ### Results
 **Analysis has been performed and here is visualisition:   
+
 ![img](https://github.com/alexander-tereshin/wifimap_test_case/blob/master/Rplot.png)**
