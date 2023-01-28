@@ -34,6 +34,6 @@ library(reshape2)
 * Сделать визуализацию данных (любую информативную на свой вкус)
 
 ### Results
-**Analysis has been performed and here is visualisition:   
+Analysis has been performed and here is visualisition:   
 
-![img](https://github.com/alexander-tereshin/wifimap_test_case/blob/master/Rplot.png)**
+![img](https://github.com/alexander-tereshin/wifimap_test_case/blob/master/Rplot.png)
