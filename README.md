@@ -1,5 +1,17 @@
 # Test task for WifiMap
-Initially, it is supposed to be performed with Python, but I used R in this project in order to practice R.
+Here my test task for data analyst position WifiMap company.
+Initially, it is supposed to be performed with Python, but I used R in this project in order to practice it.
+
+Requirements:
+'''
+library(tidyverse) 
+library(DT)
+library(scales)
+library(plyr)
+library(lubridate)
+library(ggplot2)
+library(reshape2)
+'''
 
 ### **Problem description**
 
@@ -22,4 +34,4 @@ Initially, it is supposed to be performed with Python, but I used R in this proj
 * Сделать визуализацию данных (любую информативную на свой вкус)
 
 ### Results
-**Analysis has been performed and visualisition is [here](https://github.com/alexander-tereshin/wifimap_test_case/blob/master/Rplot.png)**
+**Analysis has been performed and visualisition is ![img](https://github.com/alexander-tereshin/wifimap_test_case/blob/master/Rplot.png)**
