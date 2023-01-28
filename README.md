@@ -3,7 +3,7 @@ Here my test task for data analyst position WifiMap company.
 Initially, it is supposed to be performed with Python, but I used R in this project in order to practice it.
 
 Requirements:
-'''
+```
 library(tidyverse) 
 library(DT)
 library(scales)
@@ -11,7 +11,7 @@ library(plyr)
 library(lubridate)
 library(ggplot2)
 library(reshape2)
-'''
+```
 
 ### **Problem description**
 
