@@ -1,7 +1,7 @@
-### <center> Test task for WifiMap <center> 
+# Test task for WifiMap
 Initially, it is supposed to be performed with Python, but I used R in this project in order to practice R.
 
-## <center> **Task description**<center> 
+### **Task description**
 
 Данные:
 1) users.csv - пользователи, id - уникальный идентификатор пользователя
