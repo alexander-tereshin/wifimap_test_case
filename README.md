@@ -1,7 +1,7 @@
 # Test task for WifiMap
 Initially, it is supposed to be performed with Python, but I used R in this project in order to practice R.
 
-### **Task description**
+### **Problem description**
 
 Данные:
 1) users.csv - пользователи, id - уникальный идентификатор пользователя
@@ -20,3 +20,5 @@ Initially, it is supposed to be performed with Python, but I used R in this proj
 - посчитать сколько у пользователя hotspots к которым было больше 1, 5 и 10 уникальных(!) подключений за все время, за последний год, за последний месяц, за последнюю неделю. (Уникальными считать подключения по полю installation_id)
 
 * Сделать визуализацию данных (любую информативную на свой вкус)
+
+**Analysis has been performed and visualisition is [here](https://github.com/alexander-tereshin/wifimap_test_case/blob/master/Rplot.png)**
