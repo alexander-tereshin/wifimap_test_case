@@ -21,4 +21,5 @@ Initially, it is supposed to be performed with Python, but I used R in this proj
 
 * Сделать визуализацию данных (любую информативную на свой вкус)
 
+### Results
 **Analysis has been performed and visualisition is [here](https://github.com/alexander-tereshin/wifimap_test_case/blob/master/Rplot.png)**
